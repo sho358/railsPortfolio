@@ -14,7 +14,13 @@ module Portfolio
     config.generators do |g|
       g.assets false 
       g.test_framework false
-    end
-    
+      
+      g.test_framework :rspec,
+        controller_specs: false,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false
+      end
+    end    
   end
 end
