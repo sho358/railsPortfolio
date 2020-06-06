@@ -13,3 +13,15 @@ User.create!(name: "山田　太郎",
                password: password,
                password_confirmation: password )
   end
+
+  10.times do |n|
+    Dish.create!(name: Faker::Food.dish,
+                 description: "簡単調理！タンパク質多め脂質少なめ",
+                 portion: 2,
+                 tips: "少しワサビを加えると美味しい",
+                 reference: "https://cookpad.com/recipe/5291416",
+                 required_time: 10,
+                 popularity: 4,
+                 cook_memo: "思ったよりも簡単にできた！",
+                 user_id: 1)
+  end

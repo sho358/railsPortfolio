@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :dishes, dependent: :destroy
   attr_accessor :remember_token
   before_save :downcase_email
   validates :name, presence: true, length: { maximum: 50 }
@@ -34,6 +35,10 @@ end
 
 def forget 
   update_attribute(:remember_digest, nil)
+end
+
+def feed
+  Dish.where("user_id = ?", id)
 end
 
 private

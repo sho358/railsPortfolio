@@ -1,5 +1,12 @@
+<% if logged_in? %>
+  <div class="container">
+    <h3>みんなの料理 (<%= @feed_items.count %>)</h3>
+    <%= render 'shared/feed' %>
+  </div>
+<% else %>
 <center>
   <h1>筋肉メシ図鑑へようこそ！</h1>
   <h2>みんなでマッチョ料理、作りませんか？</h2>
   <p>お弁当やPrepなど豊富なメニューを取り揃え！</p>
 </center>
+<% end %>
