@@ -48,6 +48,7 @@ end
 
  group :production do
   gem 'pg', '0.20.0'
+  gem 'fog', '1.42'
 end
 
 group :development do
@@ -79,3 +80,5 @@ gem 'faker'
 gem 'jquery-rails', '4.3.1'
 gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'carrierwave',  '1.2.2'
+gem 'mini_magick', '>= 4.9.4'
