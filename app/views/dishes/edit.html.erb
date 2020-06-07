@@ -41,7 +41,10 @@
     <%= f.text_field :cook_memo, class: 'form-control', id: 'dish_cook_memo' %>
   </div>
 
-  <%= f.submit nil, class: 'btn btn-primary' %>
+  <%= f.submit "更新する", class: 'btn btn-primary' %>
+  <p></p>
+  <%= link_to "料理を削除する", dish_path(@dish), method: :delete,
+                              data: { confirm: "本当にこの料理を削除してよろしいですか？" } %>
 <% end %>
 </div>
 </div>
