@@ -16,7 +16,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb200 do 
-    process resize_to_fill: [200, 200, "Center"]
+    process resize_to_fill: [300, 200, "Center"]
   end
   
   def extension_whitelist
