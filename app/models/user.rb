@@ -4,6 +4,7 @@ class User < ApplicationRecord
                                   foreign_key: "follower_id",
                                   dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
+  has_many :favorites, dependent: :destroy
   has_many :passive_relationships, class_name: "Relationship",
                                    foreign_key: "followed_id",
                                    dependent: :destroy
@@ -56,7 +57,7 @@ def follow(other_user)
   following << other_user
 end
 
-def unfollowe(other_user)
+def unfollow(other_user)
   active_relationships.find_by(followed_id: other_user.id).destroy
 end
 
@@ -66,6 +67,18 @@ end
 
 def followed_by?(other_user)
   followers.include?(othet_user)
+end
+
+def favorite(dish)
+  Favorite.create!(user_id: id, dish_id: dish.id)
+end
+
+def unfavorite(dish)
+  Favorite.find_by(user_id: id, dish_id: dish.id).destroy
+end
+
+def favorite?(dish)
+  !Favorite.find_by(user_id: id, dish_id: dish.id).nil?
 end
 
 private

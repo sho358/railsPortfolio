@@ -12,10 +12,13 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only: [:create, :destroy]
-
+  
   resources :dishes
 
   get :login,  to: 'sessions#new'
   post :login,  to: 'sessions#create'
   delete :logout, to: 'sessions#destroy'
+
+  post "favorites/:dish_id/create" => "favorites#create"
+  delete "favorites/:dish_id/destroy" => "favorites#destroy"
 end
