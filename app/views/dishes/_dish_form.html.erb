@@ -30,6 +30,33 @@
     <%= f.label :required_time %> [分] 
     <%= f.text_field :required_time, class: 'form-control', id: 'dish_required_time' %>
   </div>
+  
+  <%= f.fields_for :ingredients do |i| %>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="form-group">
+          <%= i.label :name %>
+          <%= i.text_field :name, class: 'form-control ingredient_nane' %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <%= i.label :quantity %>
+          <%= i.text_field :quantity, class: 'form-control ingredient_quantity' %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
+    <%= render partial: "ingredient_form", locals: {f: f} %>
 
   <div class="form-group">
     <%= f.label :popularity %> [1~5] 

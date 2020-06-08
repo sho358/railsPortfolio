@@ -1,4 +1,4 @@
-require 'rails_helper'
+5require 'rails_helper'
 
 RSpec.describe "Comments", type: :request do
 
