@@ -10,6 +10,7 @@
   <span>
     <%= link_to((image_tag dish.picture.thumb200.url), dish_path(dish.id), class: 'dish-picture') if dish.picture.url.present? %>
   </span>
+  <p></p>
    <%= render 'users/favorite_form' %>
   </div>
 
@@ -23,7 +24,7 @@
   <p></p>
         <span class="description"><p class="title-ingredient-mini">【料理の説明】</p>
         <%= dish.description %></span><br>
-        
+        <p></p>
         <p class="title-ingredient-mini">【材料】</p>
         <% dish.ingredients.each_with_index do |ing, i| %>
           <% if ing.name.present? %>
@@ -37,8 +38,9 @@
   <br>
   <span class="popularity">■人気度: <%= dish.popularity %></span><br>
  
-  <span class="timestamp">■<%= time_ago_in_words(dish.created_at) %>前に投稿</span><br>
-
+  <span class="timestamp" style="padding-top: 5px">☑︎<%= time_ago_in_words(dish.created_at) %>前に投稿</span><br>
+  <p></p>
+  <div class="dish-user">(cooked by <%= link_to dish.user.name, user_path(dish.user) %>)</div>
     <p></p>
     <% if current_user.admin? || (current_user == dish.user) %>
     <%= link_to "削除", dish_path(dish), method: :delete,

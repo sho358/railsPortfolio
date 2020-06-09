@@ -1,21 +1,21 @@
 User.create!(
   [
     {
-      name:  "山田 良子",
-      email: "yamada@example.com",
-      password:              "foobar",
-      password_confirmation: "foobar",
+      name:  "石川 翔司",
+      email: "shokoandyurie@gmail.com",
+      password:              "ishikawa",
+      password_confirmation: "ishikawa",
       admin: true,
     },
     {
-      name:  "鈴木 恵子",
-      email: "suzuki@example.com",
+      name:  "大谷 翔平",
+      email: "ishikawa.hokudai.2013@gmail.com",
       password:              "password",
       password_confirmation: "password",
     },
     {
-      name:  "採用 太郎",
-      email: "recruit@example.com",
+      name:  "浜松 ジェニファー",
+      email: "okamotojapan123@yahoo.co.jp",
       password:              "password",
       password_confirmation: "password",
     },

@@ -12,11 +12,11 @@ class PictureUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb400 do
-    process resize_and_pad(350, 400, background = :transparent, gravity = 'Center')
+    process resize_and_pad(400, 400, background = :transparent, gravity = 'Center')
   end
 
   version :thumb200 do 
-    process resize_to_fill: [300, 400, "Center"]
+    process resize_to_fill: [350, 400, "Center"]
   end
   
   def extension_whitelist
