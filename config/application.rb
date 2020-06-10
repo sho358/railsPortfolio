@@ -2,8 +2,6 @@ require_relative 'boot'
 
 require 'rails/all'
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Portfolio
@@ -14,7 +12,15 @@ module Portfolio
     config.generators do |g|
       g.assets false 
       g.test_framework false
-    end
-    
-  end
+      
+      g.test_framework :rspec,
+        controller_specs: false,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false
+      end
+
+      config.action_view.embed_authenticity_token_in_remote_forms = true
+    end    
+  
 end
