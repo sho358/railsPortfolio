@@ -115,7 +115,7 @@ Dish.create!(
     },
     {
     name: "かに玉",
-      user_id: 3,
+      user_id: 1,
       description: description3,
       portion: portion,
       tips: tips3,
@@ -139,7 +139,7 @@ Dish.create!(
     },
     {
       name: "豚こまの生姜焼き",
-      user_id: 1,
+      user_id: 2,
       description: description2,
       portion: portion,
       tips: tips2,
@@ -163,7 +163,7 @@ Dish.create!(
     },
     {
       name: "鶏肉のチーズ照り焼き",
-      user_id: 2,
+      user_id: 3,
       description: description3,
       portion: portion,
       tips: tips2,
@@ -187,7 +187,7 @@ Dish.create!(
     },
     {
       name: "タンドリーチキン",
-      user_id: 3,
+      user_id: 1,
       description: description2,
       portion: portion,
       tips: tips2,
@@ -211,7 +211,7 @@ Dish.create!(
     },
     {
       name: "鶏肉の味噌照り焼き",
-      user_id: 1,
+      user_id: 2,
       description: description3,
       portion: portion,
       tips: tips3,
@@ -235,7 +235,7 @@ Dish.create!(
     },
     {
       name: "豚しゃぶレタス",
-      user_id: 2,
+      user_id: 3,
       description: description2,
       portion: portion,
       tips: tips2,
@@ -259,7 +259,7 @@ Dish.create!(
     },
     {
       name: "チーズオムレツ",
-      user_id: 3,
+      user_id: 2,
       description: description3,
       portion: portion,
       tips: tips3,
